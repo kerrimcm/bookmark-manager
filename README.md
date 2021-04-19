@@ -2,11 +2,14 @@
 
 Instructions
 -------
-* DB instructional files are recorded in `./db/migrations` , please follow these to setup your database to mirror ours 
+* DB instructional files are recorded in `./db/migrations` , please follow these to setup your database to mirror ours.
+1. Connect to `psql`
+2. Create the database using the `psql` command `CREATE DATABASE bookmark_manager;`
+3. Connect to the database using the `pqsl` command `\c bookmark_manager;`
+4. Run the query we have saved in the file `01_create_bookmarks_table.sql`
 
 User story part 1
 ----
-
 ```
 As a user 
 So I can catch up on my reading 
