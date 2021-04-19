@@ -2,8 +2,7 @@
 
 Instructions
 -------
-
-* 
+* DB instructional files are recorded in `./db/migrations` , please follow these to setup your database to mirror ours 
 
 User story part 1
 ----
