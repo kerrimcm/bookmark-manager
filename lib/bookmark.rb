@@ -5,7 +5,7 @@ class Bookmark
 
   def self.all 
     begin
-      con = PG.connect :dbname => 'bookmark_manager', :user => 'kerrimcmahon'
+      con = PG.connect :dbname => 'bookmark_manager'
       rs = con.exec "SELECT * FROM bookmarks"
       rs.map { |bookmark| bookmark['url'] }
     rescue PG::Error => e
@@ -16,3 +16,4 @@ class Bookmark
     end
   end
 end
+
