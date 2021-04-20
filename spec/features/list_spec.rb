@@ -9,8 +9,8 @@ feature 'Listing boomkarks' do
   scenario 'we can see our list' do
     visit '/list'
 
-    expect(page).to have_content('www.google.com')
-    expect(page).to have_content('www.youtube.com')
-    expect(page).to have_content('www.netflix.com')
+    expect(page).to have_content('http://www.makersacademy.com')
+    expect(page).to have_content('http://www.google.com')
+    expect(page).to have_content('http://www.destroyallsoftware.com')
   end
 end

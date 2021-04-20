@@ -1,28 +1,18 @@
+require 'pg'
+
 class Bookmark
   attr_reader :bookmarks
-  
-  def initialize
-    @bookmarks = [
-      "www.google.com",
-      "www.youtube.com",
-      "www.netflix.com"
-    ]
-  end
 
   def self.all 
-    [
-      "www.google.com",
-      "www.youtube.com",
-      "www.netflix.com"
-    ]
+    begin
+      con = PG.connect :dbname => 'bookmark_manager', :user => 'kerrimcmahon'
+      rs = con.exec "SELECT * FROM bookmarks"
+      rs.map { |bookmark| bookmark['url'] }
+    rescue PG::Error => e
+      puts e.message 
+    ensure
+      rs.clear if rs
+      con.close if con 
+    end
   end
-
-  # def self.create 
-  #   @bookmark = Bookmark.new
-  # end
-
-  # def self.instance
-  #   @bookmark
-  # end
-
 end

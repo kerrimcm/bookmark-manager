@@ -7,10 +7,6 @@ class BookmarkManager < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  # before do
-  #   @bookmark = Bookmark.instance
-  # end
-
   get '/' do
     erb(:home)
   end
