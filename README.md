@@ -23,5 +23,14 @@ So I can catch up on my reading
 I would like to see a list of my bookmarks
 ```
 
-![alt text](https://github.com/kerrimcm/bookmark-manager/blob/master/Images/Screenshot%202021-04-19%20at%2014.28.03.png)
+![Domain model user story 1](https://github.com/kerrimcm/bookmark-manager/blob/master/Images/Screenshot%202021-04-19%20at%2014.28.03.png)
 
+User story part 2
+----
+```
+As a user
+So that I can keep my list up to date
+I can add new bookmarks to my bookmark manager
+```
+
+![Domain model user story 2]( )
