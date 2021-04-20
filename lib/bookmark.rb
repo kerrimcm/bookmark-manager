@@ -5,7 +5,11 @@ class Bookmark
 
   def self.all 
     begin
-      con = PG.connect :dbname => 'bookmark_manager'
+      if ENV['ENVIRONMENT'] = 'test'
+        con = PG.connect :dbname => 'bookmark_manager_test'
+      else
+        con = PG.connect :dbname => 'bookmark_manager'
+      end 
       rs = con.exec "SELECT * FROM bookmarks"
       rs.map { |bookmark| bookmark['url'] }
     rescue PG::Error => e

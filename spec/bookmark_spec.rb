@@ -1,9 +1,19 @@
 require 'bookmark'
 
 describe Bookmark do
-  context '#initialize' do
+  context '#all' do
     it 'can store bookmarks' do
-      expect(Bookmark.all).to include("http://www.makersacademy.com", "http://www.google.com", "http://www.destroyallsoftware.com")
+      con = PG.connect :dbname => 'bookmark_manager_test'
+
+      con.exec("INSERT INTO bookmarks (url) VALUES ('http://www.makersacademy.com');")
+      con.exec("INSERT INTO bookmarks (url) VALUES ('http://www.destroyallsoftware.com');")
+      con.exec("INSERT INTO bookmarks (url) VALUES ('http://www.google.com');")
+
+      bookmarks = Bookmark.all
+
+      expect(bookmarks).to include('http://www.makersacademy.com')
+      expect(bookmarks).to include('http://www.destroyallsoftware.com')
+      expect(bookmarks).to include('http://www.google.com')
     end
   end
 end
