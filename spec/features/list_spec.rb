@@ -2,17 +2,16 @@ require 'pg'
 
 feature 'Listing boomkarks' do
   scenario 'we can see our bookmarks index' do
-    visit '/'
-    click_button('Bookmarks')
+    visit '/list'
     expect(page).to have_content('Your saved bookmarks')
   end
 
   scenario 'we can see our list' do
     con = PG.connect :dbname => 'bookmark_manager_test'
 
-    con.exec("INSERT INTO bookmarks VALUES(1, 'http://www.makersacademy.com');")
-    con.exec("INSERT INTO bookmarks VALUES(2, 'http://www.destroyallsoftware.com');")
-    con.exec("INSERT INTO bookmarks VALUES(3, 'http://www.google.com');")
+    Bookmark.create(url: 'http://www.makersacademy.com')
+    Bookmark.create(url: 'http://www.destroyallsoftware.com')
+    Bookmark.create(url: 'http://www.google.com')
 
     visit '/list'
 

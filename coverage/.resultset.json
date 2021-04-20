@@ -21,6 +21,28 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/kerrimcmahon/Documents/full-time/bookmark-manager/spec/features/adding_bookmarks_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
           null
         ]
       },
@@ -28,7 +50,6 @@
         "lines": [
           1,
           null,
-          1,
           1,
           1,
           1,
@@ -54,6 +75,6 @@
         ]
       }
     },
-    "timestamp": 1618935820
+    "timestamp": 1618940387
   }
 }
