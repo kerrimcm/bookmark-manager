@@ -7,8 +7,6 @@ feature 'Listing boomkarks' do
   end
 
   scenario 'we can see our list' do
-    con = PG.connect :dbname => 'bookmark_manager_test'
-
     Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
     Bookmark.create(url: 'http://www.destroyallsoftware.com', title: 'Destroy All Software')
     Bookmark.create(url: 'http://www.google.com', title: 'Google')
