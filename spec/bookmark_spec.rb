@@ -31,4 +31,14 @@ describe Bookmark do
       expect(bookmark.url).to eq 'http://test.com'
     end 
   end 
+
+  context '#delete' do
+    it 'deletes selected bookmark' do
+      bookmark = Bookmark.create(url: 'http://www.makersacademy.com', title: "Makers Academy")
+
+      Bookmark.delete(id: bookmark.id)
+
+      expect(Bookmark.all.length).to eq 0
+    end 
+  end 
 end
