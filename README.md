@@ -44,3 +44,4 @@ As a user
 So that I can remove bookmarks I no longer need
 I can delete existing bookmarks
 ```
+![Domain model user story 3](https://github.com/kerrimcm/bookmark-manager/blob/master/Images/Screenshot%202021-04-22%20at%2016.18.57.png)
