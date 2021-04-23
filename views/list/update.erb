@@ -1,8 +1,8 @@
 <h2> Update your URL below </h2>
 
-<form action="/list/<%= @bookmark_id %>" method="post">
+<form action="/list/<%= @bookmark.id %>" method="post">
   <input type="hidden" name="_method" value="PATCH" />
-  <input type="text" name="url" placeholder="Enter updated URL"/>
-  <input type="text" name="title" placeholder="Enter updated title" />
+  <input type="text" name="url" value="<%= @bookmark.url %>" />
+  <input type="text" name="title" value="<%= @bookmark.title %>" />
   <input type="submit" value="Done" />
 </form>
