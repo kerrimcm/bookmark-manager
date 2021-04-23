@@ -1,5 +1,7 @@
-class DatabaseConnection
-  def setup(dbname)
+require 'pg'
 
+class DatabaseConnection
+  def self.setup(dbname)
+    PG.connect(dbname: dbname)
   end 
 end 

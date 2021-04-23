@@ -92,7 +92,11 @@
           1,
           null,
           1,
-          2,
+          1,
+          1,
+          null,
+          1,
+          null,
           null,
           null
         ]
@@ -100,8 +104,10 @@
       "/Users/kerrimcmahon/Documents/full-time/bookmark-manager/lib/database_connection.rb": {
         "lines": [
           1,
-          1,
           null,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -182,6 +188,6 @@
         ]
       }
     },
-    "timestamp": 1619190794
+    "timestamp": 1619191698
   }
 }
