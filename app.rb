@@ -32,5 +32,16 @@ class BookmarkManager < Sinatra::Base
     redirect '/list'  
   end
 
+  get '/list/:id/update' do
+    @bookmark_id = params[:id]
+    erb :'list/update'
+  end
+
+  patch '/list/:id' do 
+    con = PG.connect :dbname => 'bookmark_manager_test'
+    con.exec("UPDATE bookmarks SET url = '#{params[:url]}', title = '#{params[:title]}' WHERE id = '#{params[:id]}'")
+    redirect '/list' 
+  end
+
   run! if app_file == $PROGRAM_NAME
 end
