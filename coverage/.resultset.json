@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/dominicmeddick/Documents/Makers/Week4/bookmark-manager/spec/bookmark_spec.rb": {
+      "/Users/kerrimcmahon/Documents/full-time/bookmark-manager/spec/bookmark_spec.rb": {
         "lines": [
           1,
           1,
@@ -74,7 +74,7 @@
           null
         ]
       },
-      "/Users/dominicmeddick/Documents/Makers/Week4/bookmark-manager/spec/database_helpers.rb": {
+      "/Users/kerrimcmahon/Documents/full-time/bookmark-manager/spec/database_helpers.rb": {
         "lines": [
           1,
           null,
@@ -85,7 +85,28 @@
           null
         ]
       },
-      "/Users/dominicmeddick/Documents/Makers/Week4/bookmark-manager/spec/features/adding_bookmarks_spec.rb": {
+      "/Users/kerrimcmahon/Documents/full-time/bookmark-manager/spec/database_connection_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/kerrimcmahon/Documents/full-time/bookmark-manager/lib/database_connection.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/kerrimcmahon/Documents/full-time/bookmark-manager/spec/features/adding_bookmarks_spec.rb": {
         "lines": [
           1,
           1,
@@ -100,7 +121,7 @@
           null
         ]
       },
-      "/Users/dominicmeddick/Documents/Makers/Week4/bookmark-manager/spec/features/deleting_bookmark_spec.rb": {
+      "/Users/kerrimcmahon/Documents/full-time/bookmark-manager/spec/features/deleting_bookmark_spec.rb": {
         "lines": [
           1,
           1,
@@ -115,7 +136,7 @@
           null
         ]
       },
-      "/Users/dominicmeddick/Documents/Makers/Week4/bookmark-manager/spec/features/show_bookmarks_spec.rb": {
+      "/Users/kerrimcmahon/Documents/full-time/bookmark-manager/spec/features/show_bookmarks_spec.rb": {
         "lines": [
           1,
           null,
@@ -139,7 +160,7 @@
           null
         ]
       },
-      "/Users/dominicmeddick/Documents/Makers/Week4/bookmark-manager/spec/features/updating_bookmarks_spec.rb": {
+      "/Users/kerrimcmahon/Documents/full-time/bookmark-manager/spec/features/updating_bookmarks_spec.rb": {
         "lines": [
           1,
           1,
@@ -161,6 +182,6 @@
         ]
       }
     },
-    "timestamp": 1619189431
+    "timestamp": 1619190794
   }
 }

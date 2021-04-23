@@ -53,3 +53,4 @@ As a user
 So I can change a bookmark in Bookmark Manager
 I want to update a bookmark
 ```
+![Domain model user story 4]()
