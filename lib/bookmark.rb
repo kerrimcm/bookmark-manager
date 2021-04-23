@@ -16,7 +16,7 @@ class Bookmark
     else
       con = PG.connect :dbname => 'bookmark_manager'
     end 
-    rs = con.exec 'SELECT * FROM bookmarks'
+    rs = con.exec("SELECT * FROM bookmarks;")
     rs.map do |bookmark|
       Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
     end
@@ -39,7 +39,7 @@ class Bookmark
     else 
       con = PG.connect :dbname => 'bookmark_manager'
     end 
-    con.exec("DELETE FROM bookmarks WHERE id = #{id}")
+    con.exec("DELETE FROM bookmarks WHERE id = #{id};")
   end 
 
   def self.update(id:, title:, url:)
@@ -51,5 +51,15 @@ class Bookmark
     result = con.exec("UPDATE bookmarks SET url = '#{url}', title = '#{title}' WHERE id = '#{id}' RETURNING id, url, title;")
     Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
+
+  def self.find(id:)
+    if ENV['ENVIRONMENT'] == 'test'
+      con = PG.connect :dbname => 'bookmark_manager_test'
+    else 
+      con = PG.connect :dbname => 'bookmark_manager'
+    end 
+    result = con.exec("SELECT * FROM bookmarks WHERE id = #{id};")
+    Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
+  end 
 end
 

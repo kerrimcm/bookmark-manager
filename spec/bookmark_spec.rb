@@ -54,4 +54,16 @@ describe Bookmark do
       expect(updated_bookmark.id).to eq bookmark.id
     end
   end
+  context '#find' do
+    it 'returns the requested bookmark object' do
+      bookmark = Bookmark.create(url: 'http://wwww.makersacademy.com', title: 'Makers Academy')
+
+      return_my_bookmark = Bookmark.find(id: bookmark.id)
+
+      expect(return_my_bookmark).to be_a Bookmark
+      expect(return_my_bookmark.id).to eq bookmark.id
+      expect(return_my_bookmark.title).to eq 'Makers Academy'
+      expect(return_my_bookmark.url).to eq 'http://wwww.makersacademy.com'
+    end
+  end
 end
