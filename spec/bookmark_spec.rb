@@ -34,11 +34,24 @@ describe Bookmark do
 
   context '#delete' do
     it 'deletes selected bookmark' do
-      bookmark = Bookmark.create(url: 'http://www.makersacademy.com', title: "Makers Academy")
+      bookmark = Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
 
       Bookmark.delete(id: bookmark.id)
 
       expect(Bookmark.all.length).to eq 0
     end 
   end 
+
+  context '#update' do
+    it 'updates selected bookmark' do
+      bookmark = Bookmark.create(url: 'http://wwww.makersacademy.com', title: 'Makers Academy')
+
+      updated_bookmark = Bookmark.update(id: bookmark.id, url: 'http://www.codewars.com', title: 'Code Wars')
+
+      expect(updated_bookmark).to be_a Bookmark
+      expect(updated_bookmark.title).to eq 'Code Wars'
+      expect(updated_bookmark.url).to eq 'http://www.codewars.com'
+      expect(updated_bookmark.id).to eq bookmark.id
+    end
+  end
 end
