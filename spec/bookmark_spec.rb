@@ -4,8 +4,6 @@ require 'database_helpers'
 describe Bookmark do
   context '#all' do
     it 'can store and return a list of bookmarks' do
-      PG.connect :dbname => 'bookmark_manager_test'
-
       bookmark = Bookmark.create(url: 'http://www.makersacademy.com', title: "Makers Academy")
       Bookmark.create(url: 'http://www.destroyallsoftware.com', title: "Destroy All Software")
       Bookmark.create(url: 'http://www.google.com', title: "Google")
