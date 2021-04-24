@@ -53,4 +53,4 @@ As a user
 So I can change a bookmark in Bookmark Manager
 I want to update a bookmark
 ```
-![Domain model user story 4]()
+![Domain model user story 4](https://github.com/kerrimcm/bookmark-manager/blob/master/Images/Screenshot%202021-04-23%20at%2016.00.41.png)
