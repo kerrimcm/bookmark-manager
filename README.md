@@ -17,6 +17,14 @@ Follow the steps below to setup the project's databases:
 4. Run the same query we have saved in the file `01_create_bookmarks_table.sql` replicating the same table above, but the test version
 5. To add the title column run the query saved in `02_add_title_to_bookmarks.sql`
 
+To get started:
+1. `git clone` this repository 
+2. `cd` into the relevant directory 
+3. Run `bundle install`
+4. Set up the databases, instructions above
+5. Run `rackup` and naviagte to http://localhost:9292/
+6. To run the tests, run `rspec`
+
 User story part 1
 ----
 ```
